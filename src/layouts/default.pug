@@ -1,0 +1,19 @@
+doctype html
+html(lang="en-US")
+  head
+    include ../partials/head
+  body
+    section.page-header
+      h1.project-name= site.title
+      h2.project-tagline= site.description
+      a.btn(href=site.basePath) Home
+      a.btn(href=site.basePath + "/another-page") Another Page
+      a.btn(href=site.basePath + "/ejs-page") EJS Page
+      a.btn(href=site.basePath + "/html-page") HTML Page
+      a.btn(href="https://github.com/doug2k1/nanogen") GitHub
+
+    section.main-content
+      != body
+
+      footer.site-footer
+        span.site-footer-credits PRUEBA.

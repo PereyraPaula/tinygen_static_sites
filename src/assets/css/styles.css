@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'GeneralSans';
+  src: url("../fonts/GeneralSans-Regular.ttf");
+}
+
+body {
+  font-family: 'GeneralSans';
+}

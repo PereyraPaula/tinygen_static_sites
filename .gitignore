@@ -1,0 +1,6 @@
+src/assets/images/*
+!src/assets/images/.gitkeep
+public/*
+.env
+node_modules
+pnpm-lock.yaml

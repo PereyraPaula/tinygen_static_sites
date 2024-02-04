@@ -1,0 +1,9 @@
+h1 Pagina PUG!
+p Esta tiene algunas variables
+h2 Información
+p La información de abajo viene de un archivo JSON.
+
+ul
+  each info in site.data
+    li
+      a(href=info.url)= info.name
