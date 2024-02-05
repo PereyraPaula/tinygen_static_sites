@@ -3,6 +3,7 @@ import path from 'path'
 import 'dotenv/config'
 import pug from 'pug'
 import frontMatter from 'front-matter'
+import markdownit from 'markdown-it'
 import { glob } from 'glob'
 import { config } from '../site.config.js'
 
@@ -13,7 +14,10 @@ fse.emptyDirSync(distPath)
 
 fse.copy(`${srcPath}/assets`, `${distPath}/assets`)
 
-const files = await glob('**/*.@(pug|html)', { cwd: `${srcPath}/pages` })
+const files = await glob(
+  '**/*.@(pug|html|md)', // File type sopported
+  { cwd: `${srcPath}/pages` }
+)
 
 files.forEach((file) => {
   const fileData = path.parse(file)
@@ -32,7 +36,11 @@ files.forEach((file) => {
 
   // generate page content according to file type
   switch (fileData.ext) {
-    case '.pug':
+    case '.md': {
+      const md = markdownit()
+      pageContent = md.render(pageData.body)
+      break
+    } case '.pug':
       pageContent = pug.renderFile(`${srcPath}/pages/${file}`, templateConfig)
       break
     default:
