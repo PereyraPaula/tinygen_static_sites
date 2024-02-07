@@ -1,9 +1,13 @@
 # TinyGenerator
 
 Simple generador de sitios estáticos. Hecho con [Node.js](https://nodejs.org/en/).  
-[Nota](#inspiracion)
 
-## Características:
+### Indice
+* [Características](#caracteristicas)
+* [Prerequisitos](#prerequisitos)
+* [Inspiración](#inspiracion)
+
+## Caracteristicas:
 - Genera archivos HTML desde: 
   - Archivos [PUG](https://pugjs.org/api/getting-started.html). 
   - Archivos [Markdown](https://es.wikipedia.org/wiki/Markdown).  
@@ -17,5 +21,5 @@ Simple generador de sitios estáticos. Hecho con [Node.js](https://nodejs.org/en
 - [Node.js](https://nodejs.org/en/): v18.16.0
 
 
-#### <a id="#inspiracion" style="text-decoration-line: underline;">Inspiración</a>:
+#### <a id="inspiracion" style="text-decoration-line: underline;">Inspiración</a>:
 La idea la tomé de este [proyecto](https://github.com/doug2k1/nanogen), pero se varió en el uso de tecnologías.
