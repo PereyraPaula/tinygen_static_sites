@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node ./scripts/build",
-    "serve": "serve ./public"
+    "dev": "node ./scripts/server"
   },
   "keywords": [],
   "author": "",
@@ -15,14 +15,15 @@
     "fs-extra": "^11.2.0",
     "glob": "^10.3.10",
     "markdown-it": "^14.0.0",
-    "serve": "^14.2.1",
     "standard": "^17.1.0"
   },
   "eslintConfig": {
     "extends": "standard"
   },
   "dependencies": {
+    "chokidar": "^3.6.0",
     "front-matter": "^4.0.2",
+    "live-server": "^1.2.2",
     "pug": "^3.0.2"
   }
 }
