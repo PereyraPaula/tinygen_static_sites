@@ -1,6 +1,7 @@
 import build from './build.js'
 import server from './utils/serve.js'
 import chokidar from 'chokidar'
+import { logMessage } from './utils/functions.js'
 
 function debounce (callback, wait) {
   let timerId
@@ -14,7 +15,7 @@ function debounce (callback, wait) {
 }
 
 const serve = async ({ srcPath, outputPath, port }) => {
-  console.log(`Starting local server at http://localhost:${port}`)
+  logMessage(`Starting local server at http://localhost:${port}`)
 
   await build()
   server({ path: outputPath, port })
@@ -23,7 +24,7 @@ const serve = async ({ srcPath, outputPath, port }) => {
     'all',
     debounce(async () => {
       await build()
-      console.log('Waiting for changes...')
+      logMessage('Waiting for changes...')
     }, 500)
   )
 }
